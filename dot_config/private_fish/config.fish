@@ -3,8 +3,7 @@ if status is-interactive
 
   starship init fish | source
 
-
-  direnv hook fish | source'
+  direnv hook fish | source
 end
 
 set -x GOPATH $HOME/go
