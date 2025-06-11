@@ -11,4 +11,4 @@ set -x PATH $PATH $GOPATH/bin
 set -x PATH $PATH $HOME/bin
 set -x PATH $PATH $HOME/.local/share/JetBrains/Toolbox/scripts
 set -x JAVA_HOME /etc/alternatives/java_sdk_24/
-set -X TESTOP {{ onepasswordRead "op://dev/test/password" }}
+set -x TESTOP {{ onepasswordRead "op://dev/test/password" }}
