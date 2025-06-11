@@ -10,4 +10,4 @@ set -x GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
 set -x PATH $PATH $HOME/bin
 set -x PATH $PATH $HOME/.local/share/JetBrains/Toolbox/scripts
-set -x JAVA_HOME /usr/bin/java
+set -x JAVA_HOME /etc/alternatives/java_sdk/
