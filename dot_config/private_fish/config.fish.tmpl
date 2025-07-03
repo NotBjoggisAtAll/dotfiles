@@ -5,12 +5,14 @@ if status is-interactive
 
   direnv hook fish | source
 
+  #Git Aliases
   alias gs="git status"
   alias gc="git switch $argv"
   alias gf="git fetch --prune"
   alias gu="git pull --rebase"
   alias ga="git add ."
   alias gcm="git commit -m $argv"
+  alias gp="git push"
 end
 
   set -x GOPATH $HOME/go
