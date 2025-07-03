@@ -1,4 +1,4 @@
-# include ~/.config/nano/*.nanorc
+ include ~/.config/nano/*.nanorc
 
 set tabsize 4
 set tabstospaces
