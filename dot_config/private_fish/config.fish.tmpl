@@ -5,10 +5,11 @@ if status is-interactive
 
   direnv hook fish | source
 
-set -x GOPATH $HOME/go
-set -x PATH $PATH $GOPATH/bin
-set -x PATH $PATH $HOME/bin
-set -x PATH $PATH $HOME/.local/share/JetBrains/Toolbox/scripts
-set -x JAVA_HOME /etc/alternatives/java_sdk_24/
-
+  alias gs="git status"
 end
+
+  set -x GOPATH $HOME/go
+  set -x PATH $PATH $GOPATH/bin
+  set -x PATH $PATH $HOME/bin
+  set -x PATH $PATH $HOME/.local/share/JetBrains/Toolbox/scripts
+  set -x JAVA_HOME /etc/alternatives/java_sdk_24/
