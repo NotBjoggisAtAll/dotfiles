@@ -6,6 +6,7 @@ if status is-interactive
   direnv hook fish | source
 
   alias gs="git status"
+  alias gc="git switch $argv"
 end
 
   set -x GOPATH $HOME/go
