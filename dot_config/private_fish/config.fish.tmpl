@@ -14,6 +14,8 @@ if status is-interactive
   alias gcm="git commit -m $argv"
   alias gp="git push"
 
+  alias applyconfig="chezmoi apply && source ~/.config/fish/config.fish"
+
   set -x SPRING_CONFIG_IMPORT "optonal:configserver:https://config.jonasandersen.dev"
 end
 
