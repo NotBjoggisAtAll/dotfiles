@@ -13,6 +13,8 @@ if status is-interactive
   alias ga="git add ."
   alias gcm="git commit -m $argv"
   alias gp="git push"
+
+  set -x SPRING_CONFIG_IMPORT "configserver:optional:https://config.jonasandersen.dev"
 end
 
   set -x GOPATH $HOME/go
