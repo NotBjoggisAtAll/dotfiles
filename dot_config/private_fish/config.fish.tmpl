@@ -17,7 +17,7 @@ if status is-interactive
   alias applyconfig="chezmoi apply && source ~/.config/fish/config.fish"
 
   set -x SPRING_CONFIG_IMPORT "optional:configserver:https://config.jonasandersen.dev"
-  set -x KUBE_CONFIG "~/.config/kube/config"
+  set -x KUBECONFIG "~/.config/kube/config"
 end
 
   set -x GOPATH $HOME/go
