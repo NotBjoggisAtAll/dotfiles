@@ -18,8 +18,8 @@ if status is-interactive
 
   alias applyconfig="chezmoi apply && source ~/.config/fish/config.fish"
 
-  alias mulvad="tailscale set --exit-node=se-sto-wg-201.mullvad.ts.net"
-  alias nomulvad="tailscale set --exit-node="
+  alias mulvad="sudo tailscale set --exit-node=se-sto-wg-201.mullvad.ts.net"
+  alias nomulvad="sudo tailscale set --exit-node="
 
   set -x SPRING_CONFIG_IMPORT "optional:configserver:https://config.jonasandersen.dev"
 end
