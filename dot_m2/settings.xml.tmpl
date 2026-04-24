@@ -11,6 +11,19 @@
             <username>{{ onepasswordRead "op://dev/reposilite-maven-repo/username" }}</username>
             <password>{{ onepasswordRead "op://dev/reposilite-maven-repo/password" }}</password>
         </server>
-
+    <mirrors>
+        <mirror>
+            <id>local-releases-mirror</id>
+            <name>Local Releases Mirror</name>
+            <url>https://maven.jonasandersen.dev/releases</url>
+            <mirrorOf>reposilite-releases</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>local-snapshots-mirror</id>
+            <name>Local Snapshots Mirror</name>
+            <url>https://maven.jonasandersen.dev/snapshots</url>
+            <mirrorOf>reposilite-snapshots</mirrorOf>
+        </mirror>
+    </mirrors>
     </servers>
 </settings>
