@@ -24,6 +24,12 @@
             <url>https://maven.jonasandersen.dev/snapshots</url>
             <mirrorOf>reposilite-snapshots</mirrorOf>
         </mirror>
+        <mirror>
+         <id>local-central-mirror</id>
+          <name>Local Proxy for Maven Central</name>
+          <url>https://maven.jonasandersen.dev/releases</url>
+          <mirrorOf>central</mirrorOf>
+        </mirror>
     </mirrors>
     </servers>
 </settings>
