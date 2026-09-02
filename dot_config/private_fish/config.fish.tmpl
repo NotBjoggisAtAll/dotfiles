@@ -19,7 +19,15 @@ if status is-interactive
   alias applyconfig="chezmoi apply && source ~/.config/fish/config.fish"
 
   set -x SPRING_CONFIG_IMPORT "optional:configserver:https://config.jonasandersen.dev"
+
+  function __sync_history --on-event fish_postexec
+    history save
+    history merge
+  end
 end
   set -x GOPATH $HOME/go
   set -x PATH $PATH $GOPATH/bin $HOME/bin $HOME/.local/share/JetBrains/Toolbox/scripts /opt/idea-IU-261.23567.138/bin $HOME/.local/bin $HOME/applications /opt/JetBrainsGateway-261.23567.152/bin /opt/nvim-linux-x86_64/bin
   set -x JAVA_HOME $HOME/.sdkman/candidates/java/current
+
+# mise (CloudBox workshop tools + KUBECONFIG)
+/home/gollien/.local/bin/mise activate fish | source
