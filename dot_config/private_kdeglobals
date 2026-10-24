@@ -134,7 +134,7 @@ ForegroundVisited=155,89,182
 
 [General]
 BrowserApplication=vivaldi-stable.desktop
-ColorSchemeHash=35c73fb379a4940e5f22982a33078640b27cf788
+ColorSchemeHash=e848f04e962cfd2c75ca22df63bcc5e89e61604e
 
 [KDE]
 contrast=4
