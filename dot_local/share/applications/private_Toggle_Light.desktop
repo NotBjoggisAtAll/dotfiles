@@ -1,0 +1,14 @@
+[Desktop Entry]
+Comment=
+Exec=/usr/bin/fish -c toggle_light
+Icon=solaar-light_020
+Name=Toggle Light
+NoDisplay=false
+Path=
+PrefersNonDefaultGPU=false
+StartupNotify=false
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
