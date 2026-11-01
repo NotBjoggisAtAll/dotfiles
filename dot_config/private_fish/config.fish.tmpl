@@ -6,6 +6,10 @@ if status is-interactive
     starship init fish | source
   end
 
+  if not type -q sdk
+    curl -s "https://get.sdkman.io" | bash
+  end
+
   direnv hook fish | source
 
   #Git Aliases
