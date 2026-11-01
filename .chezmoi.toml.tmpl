@@ -1,4 +1,9 @@
-{{- $is_desktop := promptBoolOnce . "is_desktop" "Is this a desktop/workstation with 1Password?" -}}
+{{- $is_desktop := false -}}
+
+{{/* Automatically detect if it's a desktop or server */}}
+{{- if or (env "DISPLAY") (env "WAYLAND_DISPLAY") (eq .chezmoi.os "darwin") (eq .chezmoi.os "windows") -}}
+{{-   $is_desktop = true -}}
+{{- end -}}
 
 [data]
     is_desktop = {{ $is_desktop }}
