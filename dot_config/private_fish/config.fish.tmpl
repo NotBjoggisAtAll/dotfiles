@@ -1,5 +1,9 @@
 if status is-interactive
 
+  function fish_prompt
+    echo '>'
+  end
+
   # Commands to run in interactive sessions can go here
 
   direnv hook fish | source
