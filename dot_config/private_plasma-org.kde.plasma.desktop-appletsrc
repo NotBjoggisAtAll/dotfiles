@@ -210,4 +210,4 @@ AppletOrder=4;5;6;7;31;8;22;23
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/net.lutris.battlenet-1.desktop,0,496af102-535a-4acb-b261-62e43d53c6b9,desktop:/curseforge.desktop,0,496af102-535a-4acb-b261-62e43d53c6b9
+screenMapping=desktop:/curseforge.desktop,0,496af102-535a-4acb-b261-62e43d53c6b9,desktop:/net.lutris.battlenet-1.desktop,0,496af102-535a-4acb-b261-62e43d53c6b9
