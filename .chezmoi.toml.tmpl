@@ -1,7 +1,10 @@
 {{- $is_desktop := false -}}
 
-{{/* Automatically detect if it's a desktop or server */}}
-{{- if or (env "DISPLAY") (env "WAYLAND_DISPLAY") (eq .chezmoi.os "darwin") (eq .chezmoi.os "windows") -}}
+{{- if eq .chezmoi.os "linux" -}}
+{{-   if or (stat "/usr/bin/Xorg") (stat "/usr/bin/wayland-scanner") (lookPath "xrandr") -}}
+{{-     $is_desktop = true -}}
+{{-   end -}}
+{{- else if or (eq .chezmoi.os "darwin") (eq .chezmoi.os "windows") -}}
 {{-   $is_desktop = true -}}
 {{- end -}}
 
