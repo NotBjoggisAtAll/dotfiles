@@ -2,7 +2,7 @@
 
 if command -v dnf &> /dev/null; then
     echo "Installing Fish, Direnv via DNF..."
-    dnf config-manager addrepo --from-repofile=https://download.opensuse.org/repositories/shells:fish:nightly:master/Fedora_44/shells:fish:nightly:master.repo
+    sudo dnf config-manager addrepo --from-repofile=https://download.opensuse.org/repositories/shells:fish:nightly:master/Fedora_44/shells:fish:nightly:master.repo
     sudo dnf install -y fish direnv
 elif command -v apt-get &> /dev/null; then
     echo "Installing Fish, Direnv via APT..."
