@@ -10,5 +10,8 @@ PointerAccelerationProfile=1
 [Libinput][1133][49293][Logitech G502 LIGHTSPEED Wireless Gaming Mouse]
 PointerAccelerationProfile=1
 
+[Libinput][1133][49301][Logitech G502 X PLUS]
+PointerAccelerationProfile=1
+
 [Libinput][1133][50503][Logitech USB Receiver]
 PointerAccelerationProfile=1
