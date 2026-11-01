@@ -1,7 +1,3 @@
 function toggle_light
-  {{- if not .is_desktop }}
-    echo "Not on desktop. Exiting.."
-    exit 0
-  {{- end}}
   curl -X POST http://homeassistant/api/webhook/{{ onepasswordRead "op://dev/Webhook/password" }}
 end
