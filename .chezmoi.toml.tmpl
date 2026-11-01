@@ -1,0 +1,4 @@
+{{- $is_desktop := promptBoolOnce . "is_desktop" "Is this a desktop/workstation with 1Password?" -}}
+
+[data]
+    is_desktop = {{ $is_desktop }}
