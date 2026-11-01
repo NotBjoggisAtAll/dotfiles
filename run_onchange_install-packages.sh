@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+if command -v dnf &> /dev/null; then
+    echo "Installing Fish, Direnv via DNF..."
+    sudo dnf install -y fish direnv
+elif command -v apt-get &> /dev/null; then
+    echo "Installing Fish, Direnv via APT..."
+    sudo apt update && sudo apt install -y fish direnv
+else
+    echo "Neither dnf nor apt-get found. Skipping Fish installation."
+    exit 0
+fi
