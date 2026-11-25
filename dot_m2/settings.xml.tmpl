@@ -5,31 +5,17 @@
             <id>reposilite-releases</id>
             <username>{{ onepasswordRead "op://dev/reposilite-maven-repo/username" }}</username>
             <password>{{ onepasswordRead "op://dev/reposilite-maven-repo/password" }}</password>
+            <repositoryOrigins>
+              <repositoryOrigin>https://maven.jonasandersen.no</repositoryOrigin>
+            </repositoryOrigins>
         </server>
         <server>
             <id>reposilite-snapshots</id>
             <username>{{ onepasswordRead "op://dev/reposilite-maven-repo/username" }}</username>
             <password>{{ onepasswordRead "op://dev/reposilite-maven-repo/password" }}</password>
+            <repositoryOrigins>
+              <repositoryOrigin>https://maven.jonasandersen.no</repositoryOrigin>
+            </repositoryOrigins>
         </server>
-    <mirrors>
-        <mirror>
-            <id>local-releases-mirror</id>
-            <name>Local Releases Mirror</name>
-            <url>https://maven.jonasandersen.dev/releases</url>
-            <mirrorOf>reposilite-releases</mirrorOf>
-        </mirror>
-        <mirror>
-            <id>local-snapshots-mirror</id>
-            <name>Local Snapshots Mirror</name>
-            <url>https://maven.jonasandersen.dev/snapshots</url>
-            <mirrorOf>reposilite-snapshots</mirrorOf>
-        </mirror>
-        <mirror>
-         <id>local-central-mirror</id>
-          <name>Local Proxy for Maven Central</name>
-          <url>https://maven.jonasandersen.dev/releases</url>
-          <mirrorOf>central</mirrorOf>
-        </mirror>
-    </mirrors>
     </servers>
 </settings>
