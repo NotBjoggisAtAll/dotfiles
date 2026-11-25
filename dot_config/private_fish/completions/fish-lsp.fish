@@ -109,6 +109,8 @@ function __fish_lsp_get_env_variables -d 'print all fish_lsp_* env variables, no
     set -l env_names "fish_lsp_enabled_handlers" \
 		"fish_lsp_disabled_handlers" \
 		"fish_lsp_commit_characters" \
+		"fish_lsp_enable_snippets" \
+		"fish_lsp_enable_multiword_snippets" \
 		"fish_lsp_log_file" \
 		"fish_lsp_log_level" \
 		"fish_lsp_all_indexed_paths" \
@@ -133,6 +135,8 @@ function __fish_lsp_get_env_variables -d 'print all fish_lsp_* env variables, no
     set -l env_names_with_descriptions "fish_lsp_enabled_handlers\t'server handlers to enable'" \
 		"fish_lsp_disabled_handlers\t'server handlers to disable'" \
 		"fish_lsp_commit_characters\t'commit characters that select completion items'" \
+		"fish_lsp_enable_snippets\t'enable snippet completions'" \
+		"fish_lsp_enable_multiword_snippets\t'match multiword snippet triggers'" \
 		"fish_lsp_log_file\t'path to the fish-lsp's log file'" \
 		"fish_lsp_log_level\t'minimum log level to include in the log file'" \
 		"fish_lsp_all_indexed_paths\t'directories that the server should always index on startup'" \
@@ -321,7 +325,7 @@ end
 function __fish_lsp_info_sourcemaps_complete -d 'complete the source map url for the current lsp version'
     __fish_seen_subcommand_from info
     and __fish_contains_opt source-maps
-    and __fish_lsp_not_contains_opt all all-paths check status 
+    and __fish_lsp_not_contains_opt all all-paths check status url
 end
 
 # Utility function for checking if we have seen any switches yet.
@@ -467,6 +471,7 @@ complete -c fish-lsp -n '__fish_lsp_info_sourcemaps_complete'                   
 complete -c fish-lsp -n '__fish_lsp_info_sourcemaps_complete'                                                                                      -l all-paths       -d 'the absolute paths of the installed sourcemaps' 
 complete -c fish-lsp -n '__fish_lsp_info_sourcemaps_complete'                                                                                      -l check           -d 'check if the sourcemaps are installed & valid' 
 complete -c fish-lsp -n '__fish_lsp_info_sourcemaps_complete'                                                                                      -l status          -d 'info about the sourcemaps' 
+complete -c fish-lsp -n '__fish_lsp_info_sourcemaps_complete'                                                                                      -l url             -d 'download url of the external source map for this version'
 complete -c fish-lsp -n '__fish_lsp_info_complete_opt dump-parse-tree; and __fish_lsp_is_first_switch'                                             -l dump-parse-tree -d 'dump the tree-sitter parse tree of a file'       -k -xa '(__fish_complete_suffix "*.fish" --description="path to show tree-sitter AST" | string match -rei -- ".*\.fish|.*/")'
 complete -c fish-lsp -n '__fish_seen_subcommand_from info; and __fish_lsp_last_switch --dump-parse-tree; and test (__fish_lsp_count_after_last_switch) -le 1'         -d 'fish script file'                                -k -xa '(__fish_complete_suffix "*.fish" --description="path to show tree-sitter AST" | string match -rei -- ".*\.fish|.*/")' 
 complete -c fish-lsp -n '__fish_seen_subcommand_from info; and __fish_contains_opt dump-parse-tree; and not __fish_contains_opt no-color'          -l no-color        -d 'do not colorize the output'
@@ -509,9 +514,9 @@ complete -c fish-lsp -n '__fish_seen_subcommand_from env; and __fish_lsp_env_mai
 complete -c fish-lsp -n '__fish_seen_subcommand_from env; and __fish_lsp_env_main_switch --names-joined; and not __fish_contains_opt joined'                                                    -l joined       -d 'output the names in a single line'
 
 #################################################################################
-### generated output time:      7/31/26, 11:15:28 AM                          ###
-### binary build time:          6/11/26, 4:38:37 AM                           ###
+### generated output time:      13/11/2026, 13:54:12                          ###
+### binary build time:          10/1/26, 7:34:59 PM                           ###
 ### binary build path:          ~/.local/bin/fish-lsp                         ###
-### binary build version:       1.1.4                                         ###
+### binary build version:       1.1.5                                         ###
 ### report issues:              https://github.com/ndonfris/fish-lsp/issues   ###
 #################################################################################
